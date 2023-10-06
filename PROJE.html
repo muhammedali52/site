@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header">
+            <div class="container">
+                <div class="header-navbar">
+                    <div class="header-logo">
+                        <h2 style="color: rgb(237, 216, 235);">YAZILIM DÜNYAM</h2>
+                    </div>
+                    <div class="header-menu">
+                        <ul id="menuItems">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">DISCOVER</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                        </ul>
+                        <i class="fa-solid fa-bars" id="menu-icon" onclick="menuToggle();"></i>
+                    </div>
+                </div>
+                <div class="header-text">
+                    <h1><span style="font-family: 'Times New Roman', Times, serif;">H</span>oşgeldiniz</h1>
+                    <h3 style="margin:15px; padding-left: 70px; padding-top: 17px;">yazılıma dair her şey...</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="about">
+        <div class="about">
+            <div class="container">
+                <div class="about-tittle">
+                    <h2>Yazılım<br></h2>
+                </div>
+                <div class="about-content">
+                    <div class="img">
+                        <img src="istockphoto-1291478674-612x612.jpg">
+                    </div>
+                    <div class="met">
+                        <h4 style="font-size:larger;"><br>Yazılım Nedir?</h4>
+                        <br>
+                        <p style="font-size: large;">
+                            Yazılım, temelde bilgisayara nasıl çalışacağını söyleyen komutlar ve veriler bütünüdür. Bir
+                            bilgisayarın iki ana unsuru olan yazılım ve donanım, fonksiyonel olabilmek için birbirine
+                            bağımlıdır. Bilgisayarın fiziksel parçalarından oluşan kısım donanım iken bu parçaları
+                            yazılım
+                            denilen görünmez kısım işlevsel kılar. Bu işlevselliği, farklı amaçlara hizmet etmek üzere
+                            yazılım programlar ve kodlar ortaya çıkarır. Bunun nasıl gerçekleştiğini genel hatlarıyla
+                            şöyle
+                            özetleyebiliriz:
+                            <br>
+                            Kullanıcı, kullanmakta olduğu uygulama ya da programda yaptığı işlemler ile işletim
+                            sistemine
+                            komutlar gönderir. İşletim sistemi de bu komutları donanıma iletir. Donanım bu komutları
+                            istenilen sonuçların ortaya çıkması için işler. Sonrasında işletim sistemi bu yeni verileri,
+                            uygulama yazılımına iletir ve hâlihazırda bu program içinde çalışan kullanıcı yaptığı
+                            işlemin
+                            karşılığını alır. Bu özeti yaparken kullandığımız işletim sistemi ve uygulama yazılımı gibi
+                            terimler, farklı yazılım türlerini ifade eder. Şimdi bu komutlar ve veriler bütünlerinin en
+                            yaygın kullanılan çeşitlerine bakalım.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <div class="stack">
+        <h2 style="text-align: left; color: brown;">Stack ve Heap Kavramları</h2><br>
+        <p style="font-size: large;">Stack ve Heap bellekte (ram) bulunan mantıksal yapılardır. Primitif tip dediğimiz
+            int, short, byte, long,
+            decimal, double, float gibi tipler value type (değer tipi) olarak adlandırılır ve stack de tutulur.
+            Çalışma zamanından (runtime) önce bu değerlerin bilinmesi gerekir ve işletim sistemi program çalışmadan
+            önce stack de belirli bir yer ayırır eğer bu bölüm kodu yazan kişi tarafından aşılırsa stack taşma
+            hatası ile (stack overflow) karşılaşılabilir.. Stack de veriler üst üste (LIFO) mantığında dizilir ve
+            sırası gelmeden aradaki bir değer ile işlem yapılamaz. Class type (Sınıf tipi) değişkenler referans
+            tiplerdir referans ettikleri model (referans) stack de değerleri ise heap de saklanır.
+
+            Heap ve Stack arasında ki en önemli farklardan birisi heap de veriler karışık bir şekilde saklanır stack
+            de ise artan ya da azalan adres mantığında (big and little endian) çalışır. Buna bağlı olarak heap de ki
+            bir veriye erişmek stack de ki bir veriye erişmeye göre daha maliyetli bir işlemdir. Başka bir farkı ise
+            stack de ki veri hemen silinirken heap de ki veri Garbage Collector (Çöp Toplayıcı) algoritmasına
+            bağlıdır.</p><br>
+        <img src="stack.jpg"><br><br>
+    </div>
+
+
+    <div class="for">
+        <h2 style="text-align: left; color: brown;">for ve foreach arasındaki fark</h2><br>
+        <p>
+        <h4>For Döngüsü:</h4><br>
+        Kaç yineleme istediğinizi bildiğiniz zaman tercih edilir. Belirtilen bir koşul doğru olduğu sürece bir ifade
+        bloğunu yürütmek için kullanılır.<br><br><br>
+        <div style="margin-left: 150px;">
+            int[] arry = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };<br>
+            int toplam = 0;<br>
+            for (int i = 0; i < arry.Length; i++)<br>
+                {<br>
+                toplam = toplam + arry[i];<br>
+                }<br>
+                Console.WriteLine("Toplam: {0}", toplam);<br>
+                Console.ReadLine();<br><br><br>
+        </div>
+        <h4>Foreach Döngüsü:</h4><br>
+        Örneğin diziler veya diğer yerleşik liste türleri gibi öğe koleksiyonları üzerinde çalışır. Bir tamsayı
+        indeksi kullanmaz. Bunun yerine, bir koleksiyonda kullanılır ve her öğeyi sırayla döndürür. Foreach
+        ifadesinde, minimum veya maksimum döngü sınırlarını belirtmeniz gerekmez. Tüm koleksiyonu geçer.<br><br><br>
+        <div style="margin-left: 150px;">
+            int[] arry = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };<br>
+            int toplam = 0;<br>
+            foreach (int i in arry)<br>
+            {<br>
+            toplam = toplam + i;<br>
+            }<br>
+            Console.WriteLine("Toplam: {0}", toplam);<br>
+            Console.ReadKey();<br><br><br>
+        </div>
+        </p>
+    </div>
+
+
+    <section id="about">
+        <div class="about">
+            <div class="container">
+                <div class="about-tittle">
+                    <h2>RAM</h2>
+                </div>
+                <div class="about-content">
+                    <div class="img-ram">
+                        <img src="ram.webp">
+                    </div>
+                    <div class="met">
+                        <h4 style="font-size:larger;">Ram Nedir?</h4>
+                        <br>
+                        <p style="font-size: large;">
+                            RAM, bilgisayarda kısa süreli hafıza görevini üstelenen bir sistemdir. Bilgisayarı
+                            hissedilir derecede hızlandıran söz konusu sistem, bilgisayar satın alırken aranan
+                            özelliklerin başında gelir. Geçici olarak RAM üzerinde depolanan veriler sisteme işlendikten
+                            sonra silinir. Silinen verilerin yerine yeni veriler getirilir ve döngü bu şekilde devam
+                            eder.
+
+                            RAM, elektronik cihazların kısa süreli hafıza gereksinimini karşılayan bir sistemdir.
+                            İnternet tarayıcıları, işletim sistemleri, video oyunlar, dizi ve film gibi bütün araçlar
+                            RAM üzerinden geçerek kullanıcının hizmetine sunulur. Söz konusu sistemin direkt olarak
+                            sabit sürücüye ulaşması yolu ile de sistem işletilebilir. Fakat bu durumda sistemin
+                            yavaşlaması durumu ortaya çıkar. RAM üzerinden geçen tüm veriler, sistemin çok daha hızlı
+                            şekilde yürütülmesini sağlar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <section id="contact">
+        <div class="contact">
+            <div class="container">
+                <div class="page-tittle">
+                    <h2 style="color: brown; text-align: center; width: 100%; padding-bottom: 15px;">CONTACT</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0545 747 25 58</p>
+                        <br>
+                        <p>0552 811 70 79</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus velit animi cum!</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>muhammedalikose39@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        Sitemizi ziyaret ettiğiniz için teşekkürler...
+    </footer>
+
+
+
+
+    <script>
+        var menuItems = document.getElementById('menuItems');
+        menuItems.style.maxHeight = "0px";
+
+        function menuToggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "200px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
